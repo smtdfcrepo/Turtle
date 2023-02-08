@@ -30,5 +30,6 @@ window.addEventListener("input", function(e) {
 	let target = e.target
 	if (target.dataset.bind) {
 		setBindValue(target.dataset.bind, getValue(target))
+		
 	}
 })
