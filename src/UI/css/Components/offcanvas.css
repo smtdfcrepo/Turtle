@@ -1,0 +1,159 @@
+.offcanvas {
+	position: fixed;
+	background: var(--offcanvas-bg);
+	transition: 0.61s;
+	z-index: 1001;
+}
+
+.offcanvas-header {
+	display: flex;
+	padding: 10px;
+}
+
+.offcanvas-title {
+	font-weight: bold;
+	flex: 99;
+	font-size: 17px;
+	color: var(--offcanvas-title-color);
+}
+
+
+.offcanvas-btn-control {
+	flex: 1;
+	margin: 0px;
+	font-size: 10px;
+	padding: 0px 5px;
+	background: none;
+	color: var(--offcanvas-btn-control-color);
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.offcanvas-body {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.offcanvas-top {
+	width: 100%;
+	top: -100%;
+	left: 0;
+	height: 30%;
+}
+
+.offcanvas-bottom {
+	width: 100%;
+	bottom: -100%;
+	left: 0;
+	height: 30%;
+}
+
+@media only screen and (max-width: 600px) {
+	.offcanvas-right {
+		width: 100%;
+		right: -100%;
+		height: 100%;
+		top: 0;
+	}
+
+	.offcanvas-left {
+		width: 100%;
+		left: -100%;
+		height: 100%;
+		top: 0;
+	}
+
+}
+
+@media only screen and (min-width: 600px) {
+	.offcanvas-left {
+		width: 30%;
+		left: -100%;
+		height: 100%;
+		top: 0;
+	}
+
+	.offcanvas-right {
+		width: 30%;
+		right: -100%;
+		height: 100%;
+		top: 0;
+	}
+
+
+}
+
+.offcanvas-top.open {
+	top: 0%;
+}
+
+.offcanvas-bottom.open {
+	bottom: 0%;
+}
+
+.offcanvas-left.open {
+	left: 0%;
+}
+
+.offcanvas-right.open {
+	right: 0%;
+}
+
+.offcanvas-nav{
+	margin:5px 0px;
+	min-height: 20%;
+}
+
+.offcanvas-nav li{
+	list-style: none;
+}
+
+.offcanvas-nav a{
+	text-decoration: none;
+}
+
+.offcanvas-nav>li>a{
+	display: flex;
+	color:var(--offcanvas-nav-item-color);
+	padding:10px;
+	transition: 0.4s;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.offcanvas-nav>li:hover>a{
+	color: var(--offcanvas-nav-item-hover-color);
+	background:var(--offcanvas-nav-item-hover-bg);
+}
+
+.offcanvas-nav>li:hover>ul{
+	display:block;
+}
+.offcanvas-nav>li>ul{
+	display: none;
+}
+
+.offcanvas-nav>li>ul>li{
+	padding-left: 16px;
+}
+
+.offcanvas-nav>li>ul>li>a{
+	display: flex;
+	color:var(--offcanvas-nav-item-color);
+	padding:10px;
+	transition: 0.4s;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.offcanvas-nav>li>ul>li>a:hover{
+	color: var(--offcanvas-nav-item-hover-color);
+	background:var(--offcanvas-nav-item-hover-bg);
+}
+
+.offcanvas-nav>li>ul>li:hover{
+	color: var(--offcanvas-nav-item-hover-color);
+	background:var(--offcanvas-nav-item-hover-bg);
+}

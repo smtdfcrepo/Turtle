@@ -1,0 +1,40 @@
+:root {
+	--normal-color: #00E2FF;
+	--success-color: #00F547;
+	--warning-color: #FFB500;
+	--danger-color: red;
+
+	--body-bg: white;
+	--body-color: black;
+	--btn-color: white;
+	--btn-bg: black;
+
+	--btn-outline-basic: var(--normal-color);
+	--btn-outline-success: var(--success-color);
+	--btn-outline-warning: var(--warning-color);
+	--btn-outline-danger: var(--danger-color);
+
+	--navbar-bg: black;
+	--navbar-title-color: white;
+	--navbar-icon-size: 30px;
+	--navbar-avatar-size: 30px;
+
+	--navbar-item-color: white;
+	--navbar-item-hover-bg: var(--normal-color);
+	--navbar-item-hover-color: black;
+	--navbar-subitem-color: white;
+	--navbar-subitem-hover-bg: var(--normal-color);
+	--navbar-subitem-hover-color: black;
+
+
+	--offcanvas-bg: white;
+	--offcanvas-title-color: black;
+	--offcanvas-btn-control-color: black;
+	--offcanvas-nav-item-color: green;
+	--offcanvas-nav-item-hover-color: black;
+	--offcanvas-nav-item-hover-bg: #79FFD0;
+	--modal-bg: white;
+	--modal-title-color: green;
+
+	--input-field-focus: var(--normal-color);
+}
