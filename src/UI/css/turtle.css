@@ -1,0 +1,28 @@
+@import "./Library/animate.min.css";
+@import "./theme.css";
+@import "./Display/text.css";
+@import "./Display/grid.css";
+@import "./Display/container.css";
+@import "./Components/button.css";
+@import "./Components/navbar.css";
+@import "./Components/accordion.css";
+@import "./Components/offcanvas.css";
+@import "./Components/overlay.css";
+@import "./Components/modal.css";
+@import "./Components/card.css" ;
+@import "./Components/form.css" ;
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+	background: var(--body-bg);
+	color: var(--body-color);
+}
