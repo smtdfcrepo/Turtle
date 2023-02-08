@@ -2,8 +2,10 @@
 name: Publish Turtle package to NPM
 
 on:
-  release:
-    types: [created]
+  push:
+    paths-ignore:
+      - 'dist/**'
+    branches: [ "master" ]
 
 jobs:
   build:
