@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config build_style.js && webpack --config build_script.js",
-     "test": "echo \"Error: no test specified\" && exit 1"
+     "test": 'echo \"Error: no test specified\'
   },
   "dependencies": {
     "css-loader": "^6.7.3",
