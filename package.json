@@ -1,10 +1,10 @@
 {
-  "name": "foot",
+  "name": "turtle",
   "version": "0.0.1",
   "description": "The simple framework for build UI",
   "keywords": [
-    "foot",
-    "footUI"
+    "turtle",
+    "turtleUI"
   ],
   "author": "smtdfc",
   "license": "MIT",
