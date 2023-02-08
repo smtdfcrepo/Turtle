@@ -9,7 +9,8 @@
   "author": "smtdfc",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config build_style.js && webpack --config build_script.js"
+    "build": "webpack --config build_style.js && webpack --config build_script.js",
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "css-loader": "^6.7.3",
