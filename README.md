@@ -16,7 +16,7 @@
     
 
 ***
-- Use Foot from link
+- Use Turtle from link
 
   Include Turtle in your project :
   
