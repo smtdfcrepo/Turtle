@@ -2,11 +2,11 @@ const path = require('path');
 
 module.exports = [
 	{
-		entry: './src/Core/main.js',
+		entry: './src/Client/Core/main.js',
 		mode: "production",
 		output: {
 			path: path.resolve(__dirname, 'dist'),
-			filename: 'turtle.js',
+			filename: 'turtle.client.js',
 			globalObject: 'this',
 			library: {
 				name: 'turtle',
@@ -15,7 +15,7 @@ module.exports = [
 		}
 	},
 		{
-			entry: './src/UI/scripts/main.js',
+			entry: './src/Client/UI/scripts/main.js',
 			mode: "production",
 			output: {
 				path: path.resolve(__dirname, 'dist'),

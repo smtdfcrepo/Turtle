@@ -1,5 +1,3 @@
-//import {createElement} from "../../Core/Element/Element.js"
-//import {TurtleSelector} from "../../Core/Selector.js"
 const turtle = window.turtle
 if (!turtle) {
 	console.warn("Turtle UI require Turtle Core ")

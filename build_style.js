@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  entry: './src/UI/css/turtle.css',
+  entry: './src/Client/UI/css/turtle.css',
   mode: "development",
   module: {
     rules: [
