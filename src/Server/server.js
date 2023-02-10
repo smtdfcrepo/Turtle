@@ -127,3 +127,6 @@ class TurtleServer {
 }
 
 
+module.exports ={
+	TurtleServer
+}

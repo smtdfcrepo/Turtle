@@ -9,6 +9,7 @@
   "author": "smtdfc",
   "license": "MIT",
   "scripts": {
+  	"start":"node ./src/Server/_test_/index.js",
     "build": "webpack --config build_style.js && webpack --config build_script.js"
   },
   "dependencies": {
