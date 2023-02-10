@@ -100,7 +100,7 @@ class TurtleServer {
 					let body = await readBody(req)
 					body = body ? JSON.parse(body) : {}
 					req.body = body
-					callback.forEach(f=>{
+					callback.forEach(async function(f){
 						await handle(f, req, createResponse(res));
 					})
 					match = true
