@@ -105,24 +105,31 @@ class TurtleRouter{
 	handle(req,res) {
 		let req_ = new TurtleClientRequest(req)
 		let res_ = new TurtleClientResponse(res)
-		let path = new url(req.url).pathname
+		let path =  url.parse(req.url).pathname
 		
 		this.middlewares.all.forEach((f) => {
-			f()
+			f(req_,res_)
 		})
-		
+		let matched = false
 		Object.keys(this.routeTable).forEach((route) => {
 			let r = checkParams(path, route)
 			if (r.matched && r.st == 0) {
 				this.middlewares.route[route].forEach(f=>{
-					f()
+					f(req_,res_)
 				})
 				if (!this.routeTable[route].handle[method]) {
 					res.statusCode = 404;
 					res.end("Not found");
+				}else{
+					this.routeTable[route].handle[method](req_,res_)
+					matched = true
 				}
 			}
 		})
+		if (!matched) {
+			res.statusCode = 404;
+					res.end("Not found");
+		}
 	}
 }
 
@@ -141,7 +148,7 @@ class TurtleServer{
 }
 
 
-module.export ={
+module.exports ={
 	TurtleServer,
 	TurtleClientRequest,
 	TurtleClientResponse
