@@ -1,0 +1,30 @@
+.input-field{
+	margin: 5px;
+	border:solid;
+	border-radius: 5px;
+	border-width: 1px;
+	padding: 8px;
+	min-width: 20%;
+}
+
+.input-field:focus{
+	outline: none;
+	border-color: var(--input-field-focus);
+}
+
+.input-field.invaild{
+	border-color:red;
+}
+
+.input-field.success{
+	border-color: #00F547;
+}
+
+.input-field.field-once-line{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-radius: 0px;
+	padding: 5px;
+}
+

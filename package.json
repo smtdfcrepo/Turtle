@@ -1,0 +1,26 @@
+{
+  "name": "turtle",
+  "version": "0.0.1",
+  "description": "The simple framework for build UI",
+  "keywords": [
+    "turtle",
+    "turtleUI"
+  ],
+  "author": "smtdfc",
+  "license": "MIT",
+  "scripts": {
+  	"start":"node ./src/Server/_test_/index.js",
+    "build": "webpack --config build_style.js && webpack --config build_script.js"
+  },
+  "dependencies": {
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "mini-css-extract-plugin": "^2.7.2",
+    "route-parser":"0.0.5"
+  },
+  "devDependencies": {
+    "webpack": "5.65.0",
+    "webpack-cli": "4.9.1"
+  },
+  "files":["dist"]
+}

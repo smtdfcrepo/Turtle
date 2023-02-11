@@ -1,0 +1,12 @@
+.card{
+	background: white;
+	border: solid;
+	border-width: 0.5px;
+	border-radius: 5px;
+	padding: 16px;
+	margin: 5px;
+}
+
+.card-box-shadow{
+	box-shadow: 8px 8px 8px 8px gray;
+}
