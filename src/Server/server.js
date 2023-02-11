@@ -2,22 +2,23 @@ const http = require("http")
 const url = require('url');
 const Route = require("route-parser")
 
-class TurtleClientRequest{
-	constructor(req){
+class TurtleClientRequest {
+	constructor(req) {
 		this.req = req
 		this.params = {}
 		this.query = {}
 		this.cookie = {}
 	}
 	
-	get headers(){
+	get headers() {
 		return this.req.headers
 	}
-	
-	get method(){
+
+	get method() {
 		return this.req.method
 	}
 }
+
 function checkParams(urlParams, routeParams) {
 	urlParams = urlParams.split("/")
 	routeParams = routeParams.split("/")
@@ -59,20 +60,20 @@ function readBody(req) {
 	});
 }
 
-class TurtleClientResponse{
-	constructor(res){
+class TurtleClientResponse {
+	constructor(res) {
 		this.res = res
 	}
-	send(content ){
+	send(content) {
 		this.res.end(content)
 	}
-	json(j){
+	json(j) {
 		res.setHeader("Content-Type", "application/json");
 		res.end(JSON.stringify(data));
 	}
 }
 
-class TurtleRouter{
+class TurtleRouter {
 	constructor() {
 		this.routeTable = {}
 		this.middlewares = {
@@ -80,7 +81,7 @@ class TurtleRouter{
 			route: {},
 		}
 	}
-	
+
 	middleware(a, ...b) {
 		if (typeof a == "string") {
 			if (!this.middlewares.route[a]) {
@@ -90,9 +91,9 @@ class TurtleRouter{
 		} else {
 			this.middlewares.all.push(a, ...b)
 		}
-	
+
 	}
-	
+
 	on(method, path, callback) {
 		if (!this.routeTable[path]) {
 			this.routeTable[path] = {
@@ -102,53 +103,66 @@ class TurtleRouter{
 		}
 		this.routeTable[path].handle[method] = callback
 	}
-	handle(req,res) {
+	handle(req, res) {
 		let req_ = new TurtleClientRequest(req)
 		let res_ = new TurtleClientResponse(res)
-		let path =  url.parse(req.url).pathname
-		
-		this.middlewares.all.forEach((f) => {
-			f(req_,res_)
-		})
+		let path = url.parse(req.url).pathname
+
+		if (this.middlewares.all.length > 0) {
+			this.middlewares.all.forEach((f) => {
+				f(req_, res_)
+			})
+		}
+
 		let matched = false
 		Object.keys(this.routeTable).forEach((route) => {
 			let r = checkParams(path, route)
 			if (r.matched && r.st == 0) {
-				this.middlewares.route[route].forEach(f=>{
-					f(req_,res_)
-				})
+				if (this.middlewares.route[route]) {
+					this.middlewares.route[route].forEach(f => {
+						f(req_, res_)
+					})
+				}
 				if (!this.routeTable[route].handle[method]) {
 					res.statusCode = 404;
 					res.end("Not found");
-				}else{
-					this.routeTable[route].handle[method](req_,res_)
+				} else {
+					this.routeTable[route].handle[method](req_, res_)
 					matched = true
 				}
 			}
 		})
 		if (!matched) {
 			res.statusCode = 404;
-					res.end("Not found");
+			res.end("Not found");
 		}
 	}
 }
 
-class TurtleServer{
-	constructor(){
+class TurtleServer {
+	constructor() {
 		this.router = new TurtleRouter()
-		this.sever = http.createServer(async (req,res)=>{
-			this.router.handle(req,res)
+		this.cors = false
+		this.sever = http.createServer(async (req, res) => {
+			if (this.cors) {
+				res.setHeader('Access-Control-Allow-Origin', '*')
+				res.setHeader('Access-Control-Allow-Credentials', true)
+				res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
+				res.setHeader('Access-Control-Allow-Headers', '*')
+			}
+			this.router.handle(req, res)
 		})
 	}
-	listen(port){
-		this.sever.listen(port,function(){
+	
+	listen(port) {
+		this.sever.listen(port, function() {
 			console.log(`Tuttle Server is running on port ${port} !`)
 		})
 	}
 }
 
 
-module.exports ={
+module.exports = {
 	TurtleServer,
 	TurtleClientRequest,
 	TurtleClientResponse
