@@ -139,3 +139,10 @@ class TurtleServer{
 		})
 	}
 }
+
+
+module.export ={
+	TurtleServer,
+	TurtleClientRequest,
+	TurtleClientResponse
+}
