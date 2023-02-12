@@ -1,8 +1,12 @@
 name: Publish Package to npmjs
 on:
-  release:
-    types: [published]
-jobs:
+  push:
+    paths-ignore:
+      - 'dist/**'
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -16,6 +20,6 @@ jobs:
           scope: '@turtle'
       - run: npm run build
       - run: npm ci
-      - run: yarn publish
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
