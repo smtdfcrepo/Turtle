@@ -19,7 +19,7 @@ module.exports = [
 			mode: "production",
 			output: {
 				path: path.resolve(__dirname, 'dist'),
-				filename: 'turtleUI.js',
+				filename: 'UI.turtle.client.js',
 				globalObject: 'this',
 				library: {
 					name: 'turtleUI',
