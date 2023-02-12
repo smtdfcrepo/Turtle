@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = [
 	{
-		entry: './Client/Core/main.js',
+		entry: './Core/main.js',
 		mode: "production",
 		output: {
 			path: path.resolve(__dirname, 'dist'),
@@ -15,7 +15,7 @@ module.exports = [
 		}
 	},
 		{
-			entry: './Client/UI/scripts/main.js',
+			entry: './UI/scripts/main.js',
 			mode: "production",
 			output: {
 				path: path.resolve(__dirname, 'dist'),
