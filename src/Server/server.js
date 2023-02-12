@@ -52,7 +52,7 @@ function readBody(req) {
 			body += "" + chunk;
 		});
 		req.on("end", () => {
-			resolve(body);
+			resolve(body ? JSON.parse(body) : {});
 		});
 		req.on("error", (err) => {
 			reject(err);
