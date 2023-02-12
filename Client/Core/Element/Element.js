@@ -12,6 +12,9 @@ export class TurtleElement {
 	attr() {
 		return new TurtleListAttr(this.dom, this.dom.attributes)
 	}
+	hidden(){
+		this.dom.hidden = "hidden"
+	}
 	destroy() {
 		this.dom.remove()
 	}
