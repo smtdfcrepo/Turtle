@@ -37,6 +37,7 @@ export class TurtleRequest {
 		this.headers[name] = value
 	}
 }
+
 export class TurtleResponse {
 	constructor(response) {
 		this.response = response

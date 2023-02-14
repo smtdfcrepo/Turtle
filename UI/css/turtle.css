@@ -26,3 +26,13 @@ body {
 	background: var(--body-bg);
 	color: var(--body-color);
 }
+
+
+a.link{
+	text-decoration: none;
+	cursor: none;
+}
+
+a.link:hover{
+	text-decoration: underline;
+}
