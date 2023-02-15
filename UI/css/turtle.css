@@ -11,6 +11,7 @@
 @import "./Components/modal.css";
 @import "./Components/card.css" ;
 @import "./Components/form.css" ;
+@import "./Components/spinner.css";
 * {
 	margin: 0;
 	padding: 0;

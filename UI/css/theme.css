@@ -30,8 +30,8 @@
 	--offcanvas-bg: white;
 	--offcanvas-title-color: black;
 	--offcanvas-btn-control-color: black;
-	--offcanvas-nav-item-color: green;
-	--offcanvas-nav-item-hover-color: black;
+	--offcanvas-nav-item-color: black;
+	--offcanvas-nav-item-hover-color: #FF0202;
 	--offcanvas-nav-item-hover-bg: #79FFD0;
 	--modal-bg: white;
 	--modal-title-color: green;
