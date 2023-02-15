@@ -13,6 +13,7 @@
 @import "./Components/card.css" ;
 @import "./Components/form.css" ;
 @import "./Components/spinner.css";
+@import "./Components/switch.css";
 * {
 	margin: 0;
 	padding: 0;

@@ -14,6 +14,7 @@
 	-moz-animation-duration: 0.2s;
 	-o-animation-duration: 0.2s;
 	animation-duration: 0.2s;
+	box-shadow: 2px 2px 30px 5px grey;
 }
 
 .navbar-head {

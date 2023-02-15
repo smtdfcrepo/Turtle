@@ -14,8 +14,8 @@
 	--btn-outline-warning: var(--warning-color);
 	--btn-outline-danger: var(--danger-color);
 
-	--navbar-bg: black;
-	--navbar-title-color: white;
+	--navbar-bg: white;
+	--navbar-title-color: black;
 	--navbar-icon-size: 30px;
 	--navbar-avatar-size: 30px;
 
@@ -37,4 +37,10 @@
 	--modal-title-color: green;
 
 	--input-field-focus: var(--normal-color);
+	
+	
+	--switch-bg:#ccc;
+	--switch-checked-bg:var(--normal-color);
+	--switch-border:var(--normal-color);
+	--switch-btn-bg:white;
 }

@@ -5,6 +5,7 @@
   width: 40px;
   height: 40px;
   animation: spin 0.6s linear infinite;
+  margin: 5px;
 }
 
 .spinner-double{

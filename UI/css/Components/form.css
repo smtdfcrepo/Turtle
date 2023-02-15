@@ -12,7 +12,7 @@
 	border-color: var(--input-field-focus);
 }
 
-.input-field.invaild{
+.input-field.invalid{
 	border-color:red;
 }
 
@@ -28,3 +28,28 @@
 	padding: 5px;
 }
 
+.field-description{
+	font-size: 10px;
+	margin-left:5px;
+}
+
+
+.field{
+	margin: 5px;
+}
+
+.field.invalid>.input-field{
+	border-color: red;
+}
+
+.field.invalid>.field-description{
+	color: red;
+}
+
+.field.success>.input-field{
+	border-color: var(--success-color);
+}
+
+.field.success>.field-description{
+	color: var(--success-color);
+}
