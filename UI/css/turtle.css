@@ -2,6 +2,7 @@
 @import "./theme.css";
 @import "./Display/text.css";
 @import "./Display/grid.css";
+@import "./Display/options.css";
 @import "./Display/container.css";
 @import "./Components/button.css";
 @import "./Components/navbar.css";

@@ -1,0 +1,27 @@
+.d-flex{
+	display: flex;
+}
+
+.d-none{
+	display: none;
+}
+
+.d-block{
+	display: block;
+
+}
+
+.justify-content-center{
+		justify-content: center;
+}
+
+.justify-content-left {
+	justify-content: left;
+}
+
+.justify-content-right{
+		justify-content: right;
+}
+
+
+
