@@ -19,10 +19,10 @@
 	--navbar-icon-size: 30px;
 	--navbar-avatar-size: 30px;
 
-	--navbar-item-color: white;
+	--navbar-item-color: black;
 	--navbar-item-hover-bg: var(--normal-color);
 	--navbar-item-hover-color: black;
-	--navbar-subitem-color: white;
+	--navbar-subitem-color: black;
 	--navbar-subitem-hover-bg: var(--normal-color);
 	--navbar-subitem-hover-color: black;
 

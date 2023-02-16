@@ -196,3 +196,34 @@ export class TurtleUIModal extends TurtleUIComponent {
 		}
 	}
 }
+
+export class TurtleUISwitch extends TurtleUIComponent {
+	constructor(query) {
+		super(query)
+		this.getChildComponent("input", "input")
+	}
+
+	getState() {
+		let state = this.child["input"].checked
+		return state ? "on" : "off"
+	}
+	setAction(name) {
+		switch (name) {
+			case 'on':
+				this.child["input"].checked = true
+				break;
+			case 'off':
+				this.child["input"].checked = false
+				break;
+			case 'toggle':
+				let s = this.getState()
+				if (s == "on") {
+					this.setAction("off")
+				}else{
+					this.setAction("on")
+				}
+				break;
+			
+		}
+	}
+}

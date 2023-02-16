@@ -7,6 +7,12 @@
 	min-width: 20%;
 }
 
+.check-field{
+	margin: 5px;
+	padding: 0px;
+}
+
+
 .input-field:focus{
 	outline: none;
 	border-color: var(--input-field-focus);
@@ -33,7 +39,6 @@
 	margin-left:5px;
 }
 
-
 .field{
 	margin: 5px;
 }
@@ -53,3 +58,4 @@
 .field.success>.field-description{
 	color: var(--success-color);
 }
+

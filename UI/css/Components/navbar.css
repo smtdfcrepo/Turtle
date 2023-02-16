@@ -17,6 +17,9 @@
 	box-shadow: 2px 2px 30px 5px grey;
 }
 
+.navbar.navbar-transparent {
+	background: none;
+}
 .navbar-head {
 	padding: 5px;
 	display: flex;
@@ -59,6 +62,7 @@
 @media only screen and (max-width: 600px) {
 	.navbar-items {
 		display: block;
+		
 		max-height: 0;
 		transition: max-height 0.2s;
 		overflow-y: scroll;
@@ -121,7 +125,7 @@
 	}
 
 	.navbar-items {
-
+		margin-left:5px;
 		display: block;
 	}
 

@@ -87,6 +87,12 @@ export class TurtleElement {
 	get tag() {
 		return this.dom.tagName
 	}
+	get checked(){
+		return this.dom.checked
+	}
+	set checked(state){
+		this.dom.checked = state
+	}
 }
 
 

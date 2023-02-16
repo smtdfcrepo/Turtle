@@ -72,6 +72,21 @@ export const actions = {
 			let modal = new components.TurtleUIModal(args.modal)
 			modal.setAction("toggle")
 		}
+	},
+	"switch": {
+		"on": function(target, args) {
+			let switch_ = new components.TurtleUISwitch(args.switch)
+			switch_.setAction("on")
+		},
+		"off": function(target, args) {
+			let switch_ = new components.TurtleUISwitch(args.switch)
+			switch_.setAction("off")
+		},
+		"toggle": function(target, args) {
+			let switch_ = new components.TurtleUISwitch(args.switch)
+			switch_.setAction("toggle")
+		},
+
 	}
 }
 

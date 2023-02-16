@@ -5,6 +5,7 @@
 	border-radius: 5px;
 	color: var(--btn-color);
 	background: var(--btn-bg);
+	transition: 0.4s;
 }
 
 
