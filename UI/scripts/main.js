@@ -23,20 +23,20 @@ let navbar = document.querySelector(".navbar") || document.createElement("div")
 
 if (navbar.classList.contains("navbar-auto-transparent")) {
 	if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-		navbar.style.background = "white";
+		navbar.style.background = "var(--navbar-bg)";
 	} else {
 	
-		navbar.style.background = "none"
+		navbar.style.background = "transparent"
 	}
 }
 
 window.onscroll = function() {
 	if (navbar.classList.contains("navbar-auto-transparent")) {
 		if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-			navbar.style.background = "white";
+			navbar.style.background = "var(--navbar-bg)";
 		} else {
 	
-			navbar.style.background = "none"
+			navbar.style.background = "transparent"
 		}
 	}
 	if(navbar.classList.contains("navbar-auto-hide")){

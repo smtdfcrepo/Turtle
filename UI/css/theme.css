@@ -43,4 +43,6 @@
 	--switch-checked-bg:var(--normal-color);
 	--switch-border:var(--normal-color);
 	--switch-btn-bg:white;
+	
+	--footer-bg:#cccc;
 }

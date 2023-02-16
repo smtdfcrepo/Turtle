@@ -1,7 +1,10 @@
 .footer {
-	margin: 0px;
-	padding: 10px;
-	background: green;
+	position: relative;
+  bottom: 0;
+  background: var(--footer-bg);
+  min-height: 10%;
+  padding: 10px;
+  
 }
 
 .footer-title {
@@ -37,9 +40,22 @@
 
 }
 
+.footer-horizontal-link {
+	display: flex;
+	flex-flow: row;
+	margin: 6px 0px;
+}
+
+.footer-horizontal-link>a {
+	text-decoration: none;
+	font-size: 15px;
+	padding: 5px;
+}
+
 .footer-vertical-link {
+	display: flex;
 	flex-flow: column;
-	margin:6px 0px;
+	margin: 6px 0px;
 }
 
 .footer-vertical-link>a {
@@ -52,24 +68,24 @@
 	font-size: 16px;
 }
 
-.footer-social-icon{
+.footer-social-icon {
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
 }
 
 
-.footer-social-icon-group{
+.footer-social-icon-group {
 	display: flex;
 	flex-flow: row;
 }
 
-.footer-social-icon-group>*{
+.footer-social-icon-group>* {
 	padding: 5px;
 }
 
 
-.footer-copyright{
+.footer-copyright {
 	margin: 15px 0px;
 	text-align: center;
 	font-size: 15px;
