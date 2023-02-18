@@ -19,32 +19,36 @@ export const Actions = actions
 export const MainOverlay = TurtleUIMainOverlay
 
 var prevScrollpos = window.pageYOffset;
-let navbar = document.querySelector(".navbar") || document.createElement("div")
+let navbar =  new TurtleUINavbar(".navbar")
+navbar.getChildComponent("items",".navbar-items")
 
-if (navbar.classList.contains("navbar-auto-transparent")) {
+if (navbar.component.classList.contains("navbar-auto-transparent")) {
 	if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-		navbar.style.background = "var(--navbar-bg)";
+		navbar.component.style.background = "var(--navbar-bg)";
 	} else {
 	
-		navbar.style.background = "transparent"
+		navbar.component.style.background = "transparent"
 	}
 }
 
 window.onscroll = function() {
-	if (navbar.classList.contains("navbar-auto-transparent")) {
+	if (navbar.component.classList.contains("navbar-auto-transparent") && (!navbar.component.classList.contains("open"))) {
 		if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-			navbar.style.background = "var(--navbar-bg)";
+			navbar.component.style.background = "var(--navbar-bg)";
 		} else {
-	
-			navbar.style.background = "transparent"
+			navbar.component.style.background = "transparent"
 		}
 	}
-	if(navbar.classList.contains("navbar-auto-hide")){
+	let m = window.matchMedia("(max-width: 600px)")
+	if(navbar.component.classList.contains("navbar-auto-hide") ){
+		if(m.matches && navbar.getState() != "off"){
+			return
+		}
 		var currentScrollPos = window.pageYOffset;
 		if (prevScrollpos > currentScrollPos) {
-			navbar.style.top = "0";
+			navbar.component.style.top = "0";
 		} else {
-			navbar.style.top = "-100px";
+			navbar.component.style.top = "-100px";
 		}
 		prevScrollpos = currentScrollPos;
 	}

@@ -52,11 +52,14 @@ export class TurtleUINavbar extends TurtleUIComponent {
 		switch (name) {
 			case "open":
 				//this.child.items.style.display = "block"
+				this.component.style.background = "var(--navbar-bg)";
 				this.child.items.style.maxHeight = "500px"
+				this.component.classList.add("open")
 				break
 			case "close":
 				//this.child.items.style.display = "none"
 				this.child.items.style.maxHeight = "0px"
+				this.component.classList.remove("open")
 				break
 			case "toggle":
 				let s = this.getState()
