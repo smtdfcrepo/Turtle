@@ -18,7 +18,8 @@ export const Switch = TurtleUISwitch
 export const Actions = actions
 export const MainOverlay = TurtleUIMainOverlay
 
-var prevScrollpos = window.pageYOffset;
+try {
+	var prevScrollpos = window.pageYOffset;
 let navbar =  new TurtleUINavbar(".navbar")
 navbar.getChildComponent("items",".navbar-items")
 
@@ -55,3 +56,6 @@ window.onscroll = function() {
 	
 }
 
+
+	
+} catch (e) {}
