@@ -1,0 +1,11 @@
+.table-container {
+  max-inline-size: 100%;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  scroll-behavior: smooth;
+}
+.table-container th, 
+.table-container td {
+  scroll-snap-align: start;
+  padding: 10px;
+}

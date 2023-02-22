@@ -40,9 +40,9 @@ export class TurtleUINavbar extends TurtleUIComponent {
 		this.getChildComponent("items", ".navbar-items")
 	}
 	getState() {
-		let maxHeight = this.child.items.computedStyle().maxHeight
+		let display = this.child.items.computedStyle().display
 		//console.log(maxHeight);
-		if (maxHeight == "0px") {
+		if (display == "none") {
 			return "off"
 		} else {
 			return "on"
@@ -53,12 +53,12 @@ export class TurtleUINavbar extends TurtleUIComponent {
 			case "open":
 				//this.child.items.style.display = "block"
 				this.component.style.background = "var(--navbar-bg)";
-				this.child.items.style.maxHeight = "500px"
+				this.child.items.style.display = "block"
 				this.component.classList.add("open")
 				break
 			case "close":
 				//this.child.items.style.display = "none"
-				this.child.items.style.maxHeight = "0px"
+				this.child.items.style.display = "none"
 				this.component.classList.remove("open")
 				break
 			case "toggle":
