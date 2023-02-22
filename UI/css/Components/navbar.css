@@ -14,25 +14,25 @@
 	-moz-animation-duration: 0.2s;
 	-o-animation-duration: 0.2s;
 	animation-duration: 0.2s;
-	box-shadow: 2px 2px 30px 5px grey;
+	box-shadow: 2px 2px 1.875rem 0.313rem grey;
 }
 
 .navbar.navbar-transparent {
 	background: transparent;
 }
 .navbar-head {
-	padding: 5px;
+	padding: 0.313rem;
 	display: flex;
 	align-items: center;
 }
 
 .navbar-title {
-	padding-left: 5px;
+	padding-left: 0.313rem;
 	flex: 99;
 	box-sizing: border-box;
 	font-weight: normal;
 	color: var(--navbar-title-color);
-	font-size: 19px;
+	font-size: 1.188rem;
 }
 
 .navbar-icon {
@@ -43,26 +43,25 @@
 }
 
 .navbar-avatar {
-	margin-left: 5px;
+	margin-left: 0.313rem;
 	flex: 1;
 	vertical-align: middle;
 	background: white;
 	border: solid;
-	border-width: 0.1px;
+	border-width: 0.006rem;
 	border-radius: 50%;
 	width: var(--navbar-avatar-size);
 	height: var(--navbar-avatar-size);
 }
 
 .navbar-btn-control {
-	margin: 0px;
-	padding: 5px 10px;
+	margin: 0rem;
+	padding: 0.313rem  0.625rem;
 }
 
 @media only screen and (max-width: 600px) {
 	.navbar-items {
 		display: block;
-		
 		max-height: 0;
 		transition: max-height 0.2s;
 		overflow-y: scroll;
@@ -80,7 +79,7 @@
 
 	.navbar-items>li>a {
 		display: flex;
-		padding: 10px;
+		padding: 0.625rem;
 		transition: 0.2s;
 		color: var(--navbar-item-color);
 	}
@@ -108,7 +107,7 @@
 
 	.navbar-items>li>ul>li>a {
 		display: flex;
-		padding: 10px 16px;
+		padding: 0.625rem 1rem;
 		transition: 0.2s;
 		color: var(--navbar-subitem-color);
 	}
@@ -125,13 +124,13 @@
 	}
 
 	.navbar-items {
-		margin-left:5px;
+		margin-left:0.313rem;
 		display: block;
 	}
 
 	.navbar.navbar-items-inline>.navbar-items {
 		flex: 50%;
-		margin: 10px 0px;
+		margin: 0.625rem 0rem;
 	}
 
 	.navbar.navbar-items-inline>.navbar-head {
@@ -151,13 +150,13 @@
 	}
 
 	.navbar-items>li {
-		padding: 5px;
+		padding: 0.313rem;
 		float: left;
 	}
 
 	.navbar-items>li>a {
 		position: relative;
-		padding: 5px;
+		padding: 0.313rem;
 		transition: 0.2s;
 		color: var(--navbar-item-color);
 	}
@@ -169,11 +168,11 @@
 
 	.navbar-items>li>ul {
 		display: none;
-		padding: 0px;
+		padding: 0rem;
 		position: absolute;
-		margin-top: 10px;
+		margin-top: 0.625rem;
 		background: var(--navbar-bg);
-		min-width: 200px;
+		min-width: 12.5rem;
 		-webkit-animation-name: fadeInUp;
 		-moz-animation-name: fadeInUp;
 		-o-animation-name: fadeInUp;
@@ -191,7 +190,7 @@
 
 	.navbar-items>li>ul>li>a {
 		display: flex;
-		padding: 10px 16px;
+		padding: 0.625rem 1rem;
 		transition: 0.2s;
 		color: var(--navbar-subitem-color);
 	}

@@ -7,13 +7,13 @@
 
 .offcanvas-header {
 	display: flex;
-	padding: 10px;
+	padding: 0.625rem;
 }
 
 .offcanvas-title {
 	font-weight: bold;
 	flex: 99;
-	font-size: 17px;
+	font-size: 1.063rem;
 	color: var(--offcanvas-title-color);
 }
 
@@ -21,12 +21,12 @@
 .offcanvas-btn-control {
 	flex: 1;
 	margin: 0px;
-	font-size: 10px;
-	padding: 0px 5px;
+	font-size: 0.625rem;
+	padding: 0rem 0.313rem;
 	background: none;
 	color: var(--offcanvas-btn-control-color);
 	border: none;
-	border-radius: 5px;
+	border-radius: 0.313rem;
 	font-weight: bold;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .offcanvas-nav {
-	margin: 5px 0px;
+	margin: 0.313rem 0rem;
 	min-height: 20%;
 	cursor: none;
 	
@@ -121,16 +121,16 @@
 
 .offcanvas-nav>li:hover {
 	border-left: solid;
-	border-left-width: 3px;
+	border-left-width: 0.188rem;
 }
 
 .offcanvas-nav>li>a {
 	display: flex;
 	color: var(--offcanvas-nav-item-color);
-	padding: 8px;
+	padding: 0.5rem;
 	transition: 0.4s;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 .offcanvas-nav>li:hover>a {
@@ -143,7 +143,7 @@
 }
 
 .offcanvas-nav>li>ul {
-	margin-top: 2px;
+	margin-top: 0.125rem;
 	display: none;
 			-webkit-animation-name: fadeInLeft;
 			-moz-animation-name: fadeInLeft;
@@ -156,16 +156,16 @@
 }
 
 .offcanvas-nav>li>ul>li {
-	padding-left: 16px;
+	padding-left: 1rem;
 }
 
 .offcanvas-nav>li>ul>li>a {
 	display: flex;
 	color: var(--offcanvas-nav-item-color);
-	padding: 8px;
+	padding: 0.5rem;
 	transition: 0.4s;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 .offcanvas-nav>li>ul>li>a:hover {
@@ -182,7 +182,7 @@
 .offcanvas-nav>li.active {
 
 	border-left: solid;
-	border-left-width: 3px;
+	border-left-width: 0.188rem;
 }
 
 .offcanvas-nav>li.active>ul {

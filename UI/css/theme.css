@@ -4,7 +4,7 @@
 	--warning-color: #FFB500;
 	--danger-color: red;
 
-	--body-bg: white;
+	--body-bg: #f0f0f0;
 	--body-color: black;
 	--btn-color: white;
 	--btn-bg: black;
@@ -44,5 +44,5 @@
 	--switch-border:var(--normal-color);
 	--switch-btn-bg:white;
 	
-	--footer-bg:#cccc;
+	--footer-bg:#f0f0f0;
 }

@@ -1,10 +1,10 @@
 .switch {
 	position: relative;
 	display: inline-block;
-	min-width: 60px;
-	min-height: 25px;
+	min-width: 3.75rem;
+	min-height: 20.313;
 	cursor: none;
-	margin: 5px;
+	margin: 0.313rem;
 }
 
 .switch input {
@@ -21,22 +21,22 @@
 	right: 0;
 	bottom: 0;
 	background-color: var(--switch-bg);
-	-webkit-transition: .4s;
-	transition: .4s;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
 	cursor: none;
 }
 
 .switch>span:before {
 	position: absolute;
 	content: "";
-	height: 16px;
-	width: 20px;
-	top: 5px;
-	left: 5px;
-	bottom: 5px;
+	height: 1rem;
+	width: 1.25rem;
+	top: 0.313rem;
+	left: 0.313rem;
+	bottom: 0.313rem;
 	background-color: var(--switch-btn-bg);
-	-webkit-transition: .4s;
-	transition: .4s;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
 }
 
 .switch>input:checked+span {
@@ -51,7 +51,7 @@
 
 
 .switch.switch-round>span {
-	border-radius: 15px;
+	border-radius: 0.5px;
 }
 
 .switch.switch-round>span:before {

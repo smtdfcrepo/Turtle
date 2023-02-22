@@ -1,15 +1,15 @@
 .input-field{
-	margin: 5px;
+	margin: 0.313rem;
 	border:solid;
-	border-radius: 5px;
-	border-width: 1px;
-	padding: 8px;
+	border-radius: 0.313rem;
+	border-width: 0.063rem;
+	padding: 0.5rem;
 	min-width: 20%;
 }
 
 .check-field{
-	margin: 5px;
-	padding: 0px;
+	margin: 0.313rem;
+	padding: 0rem;
 }
 
 
@@ -30,17 +30,17 @@
 	border-top: none;
 	border-left: none;
 	border-right: none;
-	border-radius: 0px;
-	padding: 5px;
+	border-radius: 0rem;
+	padding: 0.313rem;
 }
 
 .field-description{
-	font-size: 10px;
-	margin-left:5px;
+	font-size: 0.625rem;
+	margin-left:0.313rem;
 }
 
 .field{
-	margin: 5px;
+	margin: 0.313rem;
 }
 
 .field.invalid>.input-field{

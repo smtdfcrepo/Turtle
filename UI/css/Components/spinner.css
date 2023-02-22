@@ -1,26 +1,26 @@
 .spinner {
-  border: 1px solid #FFFFFF; 
-  border-top: 1px solid var(--normal-color);
+  border: 0.063rem solid #FFFFFF; 
+  border-top: 0.063rem solid var(--normal-color);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   animation: spin 0.6s linear infinite;
-  margin: 5px;
+  margin: 0.313rem;
 }
 
 .spinner-double{
-	border-bottom: 1px solid #3498db;
+	border-bottom: 0.063rem solid #3498db;
 }
 
 .spinner-big{
-	width: 60px;
-  height: 60px;
+	width: 3.75rem;
+  height: 3.75rem;
 }
 
 
 .spinner-small{
-	width: 20px;
-  height: 20px;
+	width: 1.25rem;
+  height: 1.25rem;
 }
 
 .spinner-fast{
@@ -32,20 +32,20 @@
 }
 
 .spinner-basic{
-	border-top: 1px solid var(--normal-color);
+	border-top: 0.063rem solid var(--normal-color);
 }
 
 .spinner-success {
-	border-top: 1px solid var(--success-color);
+	border-top: 0.063rem solid var(--success-color);
 }
 
 .spinner-warning {
-	border-top: 1px solid var(--warning-color);
+	border-top: 0.063rem solid var(--warning-color);
 }
 
 
 .spinner-danger {
-	border-top: 1px solid var(--danger-color);
+	border-top: 0.063rem solid var(--danger-color);
 }
 
 @keyframes spin {

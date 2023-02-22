@@ -22,13 +22,13 @@
 	-o-animation-duration: 0.4s;
 	animation-duration: 0.4s;
 	background-color: var(--modal-bg);
-	border-radius: 5px;
+	border-radius: 0.313;
 	margin: 50% auto;
 	width: 90%;
 }
 
 .modal-header {
-	padding: 10px;
+	padding: 0.625rem;
 	display: flex;
 }
 
@@ -47,9 +47,9 @@
 }
 
 .modal-body {
-	padding: 5px;
+	padding: 0.313rem;
 	border-top: solid;
-	border-width: 0.5px;
+	border-width: 0.0.313rem;
 }
 
 .modal.open {

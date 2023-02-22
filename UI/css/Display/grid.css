@@ -1,5 +1,7 @@
 .row {
 	display: flex;
+	max-width: 90%;
+	overflow-x: scroll;
 }
 
 .col {
@@ -10,6 +12,7 @@
 	.row.row-responsive {
 		display: block;
 	}
+	
 	.row.row-responsive>.col{
 		flex: 0%!important;
 	}

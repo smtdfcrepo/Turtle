@@ -1,8 +1,8 @@
 .btn {
-	margin: 5px;
-	padding: 10px 10px;
+	margin: 0.313rem;
+	padding: 0.625rem 0.625rem;
 	border: none;
-	border-radius: 5px;
+	border-radius: 0.313rem;
 	color: var(--btn-color);
 	background: var(--btn-bg);
 	transition: 0.4s;
@@ -10,14 +10,14 @@
 
 
 .btn-rounded {
-	border-radius: 50px;
+	border-radius: 3.125rem;
 }
 
 
 .btn-outline-basic {
 	color: var(--btn-outline-basic);
 	border: solid;
-	border-width: 0.5px;
+	border-width:0.031rem;
 	border-color: var(--btn-outline-basic);
 	background: none;
 }
@@ -31,7 +31,7 @@
 .btn-outline-success {
 	color: var(--btn-outline-success);
 	border: solid;
-	border-width: 0.5px;
+	border-width:0.031rem;
 	border-color: var(--btn-outline-success);
 	background: none;
 }
@@ -46,7 +46,7 @@
 .btn-outline-warning {
 	color: var(--btn-outline-warning);
 	border: solid;
-	border-width: 0.5px;
+	border-width:0.031rem;
 	border-color: var(--btn-outline-warning);
 	background: none;
 }
@@ -60,7 +60,7 @@
 .btn-outline-danger {
 	color: var(--btn-outline-danger);
 	border: solid;
-	border-width: 0.5px;
+	border-width:0.031rem;
 	border-color: var(--btn-outline-danger);
 	background: none;
 }
