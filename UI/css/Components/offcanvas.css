@@ -2,7 +2,7 @@
 	position: fixed;
 	background: var(--offcanvas-bg);
 	transition: 0.61s;
-	z-index: 1001;
+	z-index: 1002;
 }
 
 .offcanvas-header {

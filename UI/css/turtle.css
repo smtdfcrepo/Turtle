@@ -42,7 +42,6 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	letter-spacing: 0;
-	padding: 1rem;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -63,3 +62,11 @@ a.link{
 a.link:hover{
 	text-decoration: underline;
 }
+.scrollable-place { 
+  height: 1000px; 
+} 
+
+.remove-scrolling { 
+  height: 100%; 
+  overflow: hidden; 
+} 

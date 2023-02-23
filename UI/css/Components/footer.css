@@ -1,5 +1,6 @@
 .footer {
 	position: relative;
+	z-index: 0;
   bottom: 0;
   background: var(--footer-bg);
   min-height: 10%;

@@ -5,6 +5,15 @@ if (!turtle) {
 }
 const mainSelector = new turtle.Selector(document)
 
+function disableScroll() { 
+  document.body.classList.add("remove-scrolling"); 
+} 
+
+function enableScroll() { 
+  document.body.classList.remove("remove-scrolling"); 
+}
+
+
 export const TurtleUIMainOverlay = {
 	element: turtle.createElement("div"),
 	count: 0,
@@ -55,11 +64,13 @@ export class TurtleUINavbar extends TurtleUIComponent {
 				this.component.style.background = "var(--navbar-bg)";
 				this.child.items.style.display = "block"
 				this.component.classList.add("open")
+				TurtleUIMainOverlay.open()
 				break
 			case "close":
 				//this.child.items.style.display = "none"
 				this.child.items.style.display = "none"
 				this.component.classList.remove("open")
+				TurtleUIMainOverlay.close()
 				break
 			case "toggle":
 				let s = this.getState()

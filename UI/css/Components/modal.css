@@ -22,7 +22,7 @@
 	-o-animation-duration: 0.4s;
 	animation-duration: 0.4s;
 	background-color: var(--modal-bg);
-	border-radius: 0.313;
+	border-radius: 0.313rem;
 	margin: 50% auto;
 	width: 90%;
 }
@@ -56,9 +56,12 @@
 	display: block;
 }
 
+.modal-form{
+	
+}
 
 @media only screen and (min-width: 600px) {
 	.modal-content {
-		width: 60%;
+		width: 40%;
 	}
 }
