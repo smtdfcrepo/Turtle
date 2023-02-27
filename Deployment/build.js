@@ -32,7 +32,7 @@ module.exports.build = function (configs) {
 		// fs.mkdirSync(element.path,{recursive:true})
 		//console.log(element)
 	};
-	dree.scanAsync(configs.input, options, fileCallback, dirCallback)
+	dree.scanAsync(configs.pages, options, fileCallback, dirCallback)
 		.then(() => {
 			console.log("-> Running Webpack")
 			webpack(webpackConfigs, function(err, stats) {

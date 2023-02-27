@@ -1,35 +1,33 @@
 {
-  "name": "turtle-framework",
-  "version": "0.0.1",
-  "description": "The simple framework for build UI",
-  "keywords": [
+	"name": "turtle-framework",
+	"version": "0.0.1",
+	"description": "The simple framework for build UI",
+	"keywords": [
     "turtle",
     "turtleUI"
   ],
-  "bin": {
-    "turtle": "./CLI/main.js"
-  },
-  "author": "smtdfc",
-  "license": "MIT",
-  "scripts": {
-    "build": "webpack --config ./Build/Core/webpack.config.js && webpack --config ./Build/UI/css/webpack.config.js && webpack --config ./Build/UI/js/webpack.config.js",
-    "turtle-des": "node ./Core/Deployment/build.js",
-    "turtle-cli": "node ./CLI/main.js"
-  },
-  "dependencies": {
-    "css-loader": "^6.7.3",
-    "css-minimizer-webpack-plugin": "^4.2.2",
-    "dree": "^4.3.0",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.7.2",
-    "webpack-dev-server": "^4.11.1",
-    "yargs": "^17.7.1"
-  },
-  "devDependencies": {
-    "webpack": "^5.65.0",
-    "webpack-cli": "^4.9.1"
-  },
-  "files": [
+	"bin": {
+		"turtle": "./CLI/main.js"
+	},
+	"author": "smtdfc",
+	"license": "MIT",
+	"scripts": {
+		"build": "webpack --config ./Build/Core/webpack.config.js && webpack --config ./Build/UI/css/webpack.config.js && webpack --config ./Build/UI/js/webpack.config.js",
+		"turtle-des": "node ./Core/Deployment/build.js",
+		"turtle-cli": "node ./CLI/main.js"
+	},
+	"dependencies": {
+		"css-loader": "^6.7.3",
+		"css-minimizer-webpack-plugin": "^4.2.2",
+		"dree": "^4.3.0",
+		"html-webpack-plugin": "^5.5.0",
+		"mini-css-extract-plugin": "^2.7.2",
+		"webpack-dev-server": "^4.11.1",
+		"yargs": "^17.7.1",
+		"webpack": "^5.65.0",
+		"webpack-cli": "^4.9.1"
+	},
+	"files": [
     "dist",
 		"Deployment"
   ]
