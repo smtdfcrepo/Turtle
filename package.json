@@ -12,7 +12,7 @@
   "author": "smtdfc",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config ./Build/Core/webpack.config.js && webpack --config ./Build/UI/css/webpack.config.js && webpack --config ./Build/UI/script/webpack.config.js",
+    "build": "webpack --config ./Build/Core/webpack.config.js && webpack --config ./Build/UI/css/webpack.config.js && webpack --config ./Build/UI/js/webpack.config.js",
     "turtle-des": "node ./Core/Deployment/build.js",
     "turtle-cli": "node ./CLI/main.js"
   },
