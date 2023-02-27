@@ -40,6 +40,7 @@ module.exports.build = function (configs) {
 					console.error("Failed run Webpack !")
 					console.error(err)
 				}
+				console.log("--------------------")
 				console.log("Successful !")
 			})
 		})
