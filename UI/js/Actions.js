@@ -11,6 +11,7 @@ export const actions = {
 			navbar.setAction("close")
 		},
 		"toggle": function(target, args) {
+			//console.log(1);
 			let navbar = new components.TurtleUINavbar(args.navbar)
 			navbar.setAction("toggle")
 		}
@@ -25,7 +26,7 @@ export const actions = {
 			accordion.setAction("close")
 		},
 		"toggle": function(target, args) {
-
+			//console.log(1);
 			let accordion = new components.TurtleUIAccordion(args.accordion)
 			accordion.setAction("toggle")
 		}
@@ -40,7 +41,7 @@ export const actions = {
 			offcanvas.setAction("close")
 		},
 		"toggle": function(target, args) {
-
+//console.log(1);
 			let offcanvas = new components.TurtleUIOffcanvas(args.offcanvas)
 			offcanvas.setAction("toggle")
 		}

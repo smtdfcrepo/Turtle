@@ -33,6 +33,7 @@ if (navbar.component.classList.contains("navbar-auto-transparent")) {
 }
 
 window.onscroll = function() {
+	console.log(1);
 	if (navbar.component.classList.contains("navbar-auto-transparent") && (!navbar.component.classList.contains("open"))) {
 		if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
 			navbar.component.style.background = "var(--navbar-bg)";

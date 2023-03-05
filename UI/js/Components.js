@@ -5,12 +5,12 @@ if (!turtle) {
 }
 const mainSelector = new turtle.Selector(document)
 
-function disableScroll() { 
-  document.body.classList.add("remove-scrolling"); 
-} 
+function disableScroll() {
+	document.body.classList.add("remove-scrolling");
+}
 
-function enableScroll() { 
-  document.body.classList.remove("remove-scrolling"); 
+function enableScroll() {
+	document.body.classList.remove("remove-scrolling");
 }
 
 
@@ -49,26 +49,26 @@ export class TurtleUINavbar extends TurtleUIComponent {
 		this.getChildComponent("items", ".navbar-items")
 	}
 	getState() {
+		/*
 		let display = this.child.items.computedStyle().display
 		//console.log(maxHeight);
 		if (display == "none") {
 			return "off"
 		} else {
 			return "on"
-		}
+		}*/
+		return this.component.classList.contains("open") ? 'on' : 'off'
 	}
 	setAction(name) {
 		switch (name) {
 			case "open":
 				//this.child.items.style.display = "block"
 				this.component.style.background = "var(--navbar-bg)";
-				this.child.items.style.display = "block"
 				this.component.classList.add("open")
 				TurtleUIMainOverlay.open()
 				break
 			case "close":
 				//this.child.items.style.display = "none"
-				this.child.items.style.display = "none"
 				this.component.classList.remove("open")
 				TurtleUIMainOverlay.close()
 				break
@@ -99,21 +99,24 @@ export class TurtleUIAccordion extends TurtleUIComponent {
     }else{
       return "close"
     }*/
-		return this.child.body.computedStyle().maxHeight
+		return this.component.classList.contains("active") ? "open" : "close"
 	}
 
 	setAction(name) {
 		switch (name) {
 			case "open":
-				this.child.body.style.maxHeight = this.child.body.dom.scrollHeight + "px"
+				this.component.classList.add("active")
 				break
 			case "close":
-				this.child.body.style.maxHeight = "0px"
+				this.component.classList.remove("active")
 				break
 			case "toggle":
-				let mh = this.getState()
-				if (mh == "0px") {
-					this.child.body.style.maxHeight = this.child.body.dom.scrollHeight + "px"
+				let state = this.getState()
+				//console.log(state);
+				if (state == "open") {
+					this.component.classList.remove("active")
+				} else {
+					this.component.classList.add("active")
 				}
 		}
 	}
@@ -233,11 +236,11 @@ export class TurtleUISwitch extends TurtleUIComponent {
 				let s = this.getState()
 				if (s == "on") {
 					this.setAction("off")
-				}else{
+				} else {
 					this.setAction("on")
 				}
 				break;
-			
+
 		}
 	}
 }

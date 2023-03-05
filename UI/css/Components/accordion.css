@@ -1,22 +1,82 @@
 .accordion {
-	width: 100%;
-	border: solid;
-	border-width: 0.313rem;
-	border-radius: 0.313rem;
+  font-size: 1rem;
+  width: 30vw;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+}
 
+.accordion-header,
+.accordion-body {
+  background: white;
 }
 
 .accordion-header {
-	display: flex;
-	padding: 16px;
-	background: none;
-	border: none;
-	width: 100%;
+  padding: 1.5em 1.5em;
+  background:  var(--accordion-header-bg);
+  color: var(--accordion-header-color);
+  cursor: none;
+  font-size: .7em;
+  letter-spacing: .1em;
+  transition: all .3s;
+  text-transform: uppercase;
+  
+}
+
+.accordion-item .accordion-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .accordion-body {
-	overflow: hidden;
-	height: 100%;
-	max-height: 0;
-	transition: 1s;
+  background: var(--accordion-body-bg);
+  color: var(--accordion-body-color);
+  display: none;
+}
+
+.accordion-body-contents {
+  padding: 1.5em 1.5em;
+  font-size: .85em;
+}
+
+
+.accordion-item > .accordion-header:after {
+  content: var(--accordion-icon);
+  font-family: IonIcons;
+  font-size: 1.2em;
+  float: right;
+  position: relative;
+  top: -2px;
+  transition: .3s all;
+  transform: rotate(0deg);
+}
+
+.accordion-item.active > .accordion-header:after {
+  transform: rotate(-180deg);
+}
+
+.accordion-item.active > .accordion-body {
+	display: block;
+  -webkit-animation-name: slideInLeft;
+  -moz-animation-name: slideInLeft;
+  -o-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+.accordion-item .accordion-item .accordion-header {
+  background: var(--sub-accordion-header-bg);
+  color: var(--sub-accordion-header-color	);
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 1em;
+  }
+  
+  .accordion {
+    width: 100%;
+  }
 }

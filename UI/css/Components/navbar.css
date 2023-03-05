@@ -24,7 +24,7 @@
 .navbar-title {
 	flex: 50;
 	margin: 0px;
-	font-size: 18px;
+	font-size: 30px;
 	padding: 0px 5px;
 	color: var(--navbar-title-color)
 }
@@ -35,7 +35,19 @@
 	padding: 5px;
 }
 
+.navbar a {
+	text-decoration: none;
+}
+
+.navbar li {
+	list-style: none;
+}
+
 @media screen and (min-width:600px) {
+	.navbar-mobile-btn-close {
+		display: none;
+	}
+
 	.navbar-btn-control {
 		display: none;
 	}
@@ -60,7 +72,7 @@
 		display: flex;
 		color: var(--navbar-item-color);
 		cursor: none;
-		padding: 0px 5px;
+		padding: 5px 10px;
 		transition: 0.4s;
 	}
 
@@ -75,10 +87,18 @@
 		display: none;
 		background: azure;
 		left: 1;
-		min-width: 150px;
+		min-width: 190px;
 		margin: 0px;
 		margin-top: 10px;
 		padding: 0px;
+		-webkit-animation-name: slideInUp;
+		-moz-animation-name: slideInUp;
+		-o-animation-name: slideInUp;
+		animation-name: slideInUp;
+		-webkit-animation-duration: 0.3s;
+		-moz-animation-duration: 0.3s;
+		-o-animation-duration: 0.3s;
+		animation-duration: 0.3s;
 	}
 
 	.navbar-items>li>ul>li {
@@ -87,14 +107,13 @@
 
 	.navbar-items>li>ul>li>a {
 		display: flex;
-		padding: 16px;
+		padding: 10px;
 		color: var(--navbar-subitem-color);
 		transition: 0.4s;
 	}
 
 	.navbar-items>li>ul>li:hover>a {
 		display: flex;
-		padding: 16px;
 		color: var(--navbar-subitem-hover-color);
 		background: var(--navbar-subitem-hover-bg);
 	}
@@ -112,27 +131,29 @@
 
 @media screen and (max-width:600px) {
 	.navbar-items {
-
 		margin: 10px;
-		display: none;
 		background: azure;
-		position: absolute;
+		position: fixed;
 		z-index: 10;
 		color: black;
 		background: var(--navbar-bg);
-		left: 0;
+		left: -1000px;
 		top: 0;
 		width: 100%;
-		max-height: 600px;
+		min-height: 1000px;
+		max-height: 1000px;
 		overflow-y: scroll;
-		margin: 0px;
+		margin: 0;
+		transition: 0.9s;
+		-webkit-animation-name: fadeInLeft;
+		-moz-animation-name: fadeInLeft;
+		-o-animation-name: fadeInLeft;
+		animation-name: fadeInLeft;
+		animation-duration: 0.1s;
+	}
 
-		-webkit-animation-name: fadeInDown;
-		-moz-animation-name: fadeInDown;
-		-o-animation-name: fadeInDown;
-		animation-name: fadeInDown;
-		animation-duration: 0.5s;
-
+	.navbar.open>.navbar-items {
+		left: 0px;
 	}
 
 	.navbar-items li {
@@ -142,7 +163,6 @@
 
 	.navbar-items>li {
 		flex: 1;
-
 	}
 
 	.navbar-items>li>a {
@@ -161,10 +181,9 @@
 
 	.navbar-items>li>ul {
 		display: none;
-		width: 98%;
+		width: 100%;
 		background: azure;
 		left: 1;
-		min-width: 150px;
 		margin: 0px;
 		margin-top: 10px;
 		padding: 0px;
@@ -172,7 +191,7 @@
 		-moz-animation-name: fadeInLeft;
 		-o-animation-name: fadeInLeft;
 		animation-name: fadeInLeft;
-		animation-duration: 0.5s;
+		animation-duration: 0.1s;
 	}
 
 	.navbar-items>li>ul>li {
@@ -181,7 +200,8 @@
 
 	.navbar-items>li>ul>li>a {
 		display: flex;
-		padding: 16px;
+		padding: 10px 0px;
+		padding-left:30px;
 		color: var(--navbar-item-color);
 		transition: 0.4s;
 	}
@@ -215,6 +235,13 @@
 		width: 100%;
 		padding: 16px;
 		z-index: 13;
+	}
+
+	.navbar-mobile-btn-close {
+		background: none;
+		border: none;
+		font-weight: bold;
+		padding: 16px;
 	}
 }
 

@@ -2,7 +2,7 @@ const path = require("path")
 
 module.exports = [
 	{
-		entry: path.join(__dirname, "./../../../UI/scripts/main.js"),
+		entry: path.join(__dirname, "./../../../UI/js/main.js"),
 		mode: "production",
 		output: {
 			path: path.resolve(__dirname, "./../../../dist"),
