@@ -143,6 +143,7 @@
 		min-height: 1000px;
 		max-height: 1000px;
 		overflow-y: scroll;
+		padding-bottom:25px;
 		margin: 0;
 		transition: 0.9s;
 		-webkit-animation-name: fadeInLeft;
@@ -213,8 +214,7 @@
 
 	.navbar-items>li:hover>ul {
 		display: block;
-		position: absolute;
-
+		
 	}
 
 	.navbar-items>li>ul>li:hover>a {
