@@ -28,7 +28,7 @@ export const binding = {
 export const FormValidate = TurtleFormValidate
 export const FormValidateError = TurtleFormValidateError
 export const Selector = TurtleSelector
-
+export const Storage = TurtleStorage
 window.turtle ={
 	Element,
 	component,
@@ -41,6 +41,7 @@ window.turtle ={
 	binding,
 	FormValidate,
 	FormValidateError,
-	Selector
+	Selector,
+	Storage
 }
 //export const UI = UI_
