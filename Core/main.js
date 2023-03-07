@@ -1,3 +1,4 @@
+import "./Lib/localforage.min.js"
 import {createElement as ce_ ,TurtleElement,TurtleListElement} from "./Element/Element.js"
 import {TurtleListAttr} from "./Element/ListAttr.js"
 import {setBindValue,getBindValue} from "./Binding.js"
@@ -7,7 +8,7 @@ import {TurtleFormValidate,TurtleFormValidateError} from "./Form.js"
 import {ClientInfo} from "./Client.js"
 import {TurtleSelector} from "./Selector.js"
 import {TurtleRequest,TurtleResponse} from "./HTTP.js"
-import {} from "./storage.js"
+import {TurtleStorage} from "./storage.js"
 
 export const Element = TurtleElement
 export const createElement  = ce_
