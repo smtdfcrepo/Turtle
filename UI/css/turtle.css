@@ -70,3 +70,16 @@ a.link:hover{
   height: 100%; 
   overflow: hidden; 
 } 
+
+
+.item{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.item > *{
+  padding: 15px;
+}
+
+
